@@ -54,7 +54,7 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((feature) => (
-          <Card key={feature.id} item={feature} />
+          <Card key={feature.id} item={feature} bgColor="bg-slate-50" />
         ))}
       </div>
     </section>

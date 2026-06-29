@@ -28,13 +28,13 @@ const themeStyles = {
   }
 };
 
-export const Card = ({ item }) => {
+export const Card = ({ item, bgColor = 'bg-white' }) => {
   const IconComponent = item.icon;
   const styles = themeStyles[item.themeColor] || themeStyles["blue-600"];
 
   return (
     <div
-      className={`group bg-white rounded-3xl p-8 border-2 border-transparent flex flex-col justify-between items-start text-right transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${styles.shadow}`}
+      className={`group ${bgColor} rounded-3xl p-8 border-2 border-transparent flex flex-col justify-between items-start text-right transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${styles.shadow}`}
     >
       <div className="w-full">
         <div

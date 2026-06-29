@@ -38,11 +38,11 @@ export default function Hero() {
           <span className="text-brand-primary">بـــــاهتمـــــام</span>
         </h1>
 
-        <p className="text-gray-700 text-base md:text-lg leading-relaxed font-semibold">
+        {/* <p className="text-gray-700 text-base md:text-lg leading-relaxed font-semibold">
           نقدم خدمات طبية متكاملة بأعلى معايير الجودة، كادر طبي بتخصصات دقيقة
           وخبرة متقدمة لخدمة المجتمع، نجمع بين الخبرة العريقة وأحدث تقنيات
           العلاج والأجهزة الطبية.
-        </p>
+        </p> */}
 
         <div className="flex flex-wrap gap-4 pt-4 justify-start">
           <Button variant="success" size="lg" className="rounded-xl font-bold">
