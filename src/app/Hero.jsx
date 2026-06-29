@@ -53,7 +53,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 w-full pb-6 md:pb-12 pt-16 px-6 md:px-16 lg:px-24 grid grid-cols-2 md:grid-cols-4 gap-8 text-center bg-gradient-to-t from-background to-transparent">
+      <div className="relative z-10 w-full pb-6 md:pb-12 pt-16 px-6 md:px-16 lg:px-24 grid grid-cols-2 md:grid-cols-4 gap-8 text-center bg-linear-to-t from-background to-transparent">
         {stats.map((stat) => (
           <div
             key={stat.id}

@@ -24,10 +24,10 @@ export default function Header() {
       role="banner"
     >
       <div
-        className={`flex items-center justify-between w-full transition-all duration-500 rounded-2xl px-6 ${
+        className={`flex items-center justify-between w-full transition-all duration-500 ease-in-out rounded-2xl px-6 transform ${
           isScrolled
-            ? "bg-white/80 backdrop-blur-md shadow-lg scale-98 mt-4"
-            : "bg-transparent shadow-none scale-100 mt-6"
+            ? "bg-white/80 backdrop-blur-md shadow-lg scale-98 translate-y-4"
+            : "bg-transparent shadow-none scale-100 translate-y-6"
         }`}
       >
         <div className="flex-1 flex items-center justify-start">
@@ -99,8 +99,8 @@ export default function Header() {
       <div
         className={`fixed inset-x-0 top-[110px] mx-6 z-40 bg-white/95 backdrop-blur-lg flex flex-col p-8 space-y-6 md:hidden rounded-3xl border border-gray-100 shadow-2xl transition-all duration-300 ease-out origin-top ${
           isMenuOpen
-            ? "opacity-100  translate-y-0 pointer-events-auto"
-            : "opacity-0  -translate-y-4 pointer-events-none"
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
         <nav className="flex flex-col gap-5 text-lg font-bold text-gray-800 text-right" aria-label="قائمة التنقل للهاتف">
