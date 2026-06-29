@@ -38,6 +38,7 @@ export default function About() {
   return (
     <section
       id="about"
+      aria-label="نبذة عن مستشفى حضرموت الحديث"
       className="w-full bg-background py-20 px-6 md:px-16 lg:px-24 scroll-mt-28"
       dir="rtl"
     >

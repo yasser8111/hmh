@@ -21,6 +21,7 @@ export default function Header() {
     <header
       className="w-full fixed top-0 left-0 right-0 z-50 mx-auto px-6 md:px-16 lg:px-24"
       dir="rtl"
+      role="banner"
     >
       <div
         className={`flex items-center justify-between w-full transition-all duration-500 rounded-2xl px-6 ${
@@ -37,7 +38,7 @@ export default function Header() {
           />
         </div>
 
-        <nav className="hidden md:flex items-center gap-8 font-medium text-gray-600 shrink-0">
+        <nav className="hidden md:flex items-center gap-8 font-medium text-gray-600 shrink-0" aria-label="التنقل الرئيسي">
           <a
             href="#hero"
             className="hover:text-brand-primary transition-colors text-gray-900"
@@ -102,7 +103,7 @@ export default function Header() {
             : "opacity-0  -translate-y-4 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col gap-5 text-lg font-bold text-gray-800 text-right">
+        <nav className="flex flex-col gap-5 text-lg font-bold text-gray-800 text-right" aria-label="قائمة التنقل للهاتف">
           <a
             href="#hero"
             onClick={() => setIsMenuOpen(false)}

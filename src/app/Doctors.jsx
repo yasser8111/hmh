@@ -38,12 +38,13 @@ const doctors = [
 
 function DoctorCard({ doc }) {
   return (
-    <div
+    <article
       className={`group bg-slate-50 rounded-3xl p-8 flex flex-col justify-between items-center text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:shadow-blue-600/20`}
     >
       <div className="flex flex-col items-center w-full">
         <div
           className={`w-28 h-28 rounded-full ${doc.colorClass} flex items-center justify-center text-3xl font-black mb-6 shadow-inner`}
+          aria-hidden="true"
         >
           <span>{doc.initials}</span>
         </div>
@@ -65,7 +66,7 @@ function DoctorCard({ doc }) {
           <span>حجز موعد الآن</span>
         </Button>
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -75,6 +76,7 @@ export default function Doctors() {
     className="w-full bg-white py-24 px-6 md:px-16 lg:px-24 scroll-mt-28" 
     dir="rtl" 
     id="doctors"
+    aria-label="نخبة من الأطباء والاستشاريين"
     >
       <div className="max-w-4xl mx-auto text-center space-y-6 mb-18">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-brand-primary">

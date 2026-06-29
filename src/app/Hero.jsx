@@ -21,13 +21,15 @@ export default function Hero() {
     <section
       dir="rtl"
       id="hero"
+      aria-label="القسم الرئيسي - نرعاكم باهتمام"
       className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden pt-24"
     >
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" aria-hidden="true">
         <img
           src="/bg-hero.png"
-          alt="image_e84b81.jpg"
+          alt="خلفية مستشفى حضرموت الحديث"
           className="w-full h-full object-cover object-center"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-background/80"></div>
       </div>

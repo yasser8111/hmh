@@ -39,6 +39,7 @@ export default function Sections() {
       className="w-full bg-slate-50 py-24 px-6 md:px-16 lg:px-24 relative overflow-hidden scroll-mt-28"
       dir="rtl"
       id="sections"
+      aria-label="الأقسام الطبية في مستشفى حضرموت الحديث"
     >
       <div className="max-w-4xl mx-auto text-center space-y-6 mb-18">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-brand-primary">
