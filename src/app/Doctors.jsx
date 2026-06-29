@@ -71,7 +71,11 @@ function DoctorCard({ doc }) {
 
 export default function Doctors() {
   return (
-    <section className="w-full bg-white py-24 px-6 md:px-16 lg:px-24" dir="rtl">
+    <section 
+    className="w-full bg-white py-24 px-6 md:px-16 lg:px-24 scroll-mt-28" 
+    dir="rtl" 
+    id="doctors"
+    >
       <div className="max-w-4xl mx-auto text-center space-y-6 mb-18">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-brand-primary">
           نخبة من الأطباء

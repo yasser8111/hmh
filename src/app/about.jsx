@@ -37,7 +37,8 @@ const features = [
 export default function About() {
   return (
     <section
-      className="w-full bg-background py-20 px-6 md:px-16 lg:px-24"
+      id="about"
+      className="w-full bg-background py-20 px-6 md:px-16 lg:px-24 scroll-mt-28"
       dir="rtl"
     >
       <div className="max-w-4xl mx-auto text-center space-y-6 mb-18">

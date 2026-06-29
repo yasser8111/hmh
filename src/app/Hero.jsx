@@ -20,6 +20,7 @@ export default function Hero() {
   return (
     <section
       dir="rtl"
+      id="hero"
       className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden pt-24"
     >
       <div className="absolute inset-0 z-0">
@@ -37,13 +38,6 @@ export default function Hero() {
           <br />
           <span className="text-brand-primary">بـــــاهتمـــــام</span>
         </h1>
-
-        {/* <p className="text-gray-700 text-base md:text-lg leading-relaxed font-semibold">
-          نقدم خدمات طبية متكاملة بأعلى معايير الجودة، كادر طبي بتخصصات دقيقة
-          وخبرة متقدمة لخدمة المجتمع، نجمع بين الخبرة العريقة وأحدث تقنيات
-          العلاج والأجهزة الطبية.
-        </p> */}
-
         <div className="flex flex-wrap gap-4 pt-4 justify-start">
           <Button variant="success" size="lg" className="rounded-xl font-bold">
             <Calendar className="w-5 h-5 stroke-[2.5] ml-3" />
