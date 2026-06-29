@@ -1,6 +1,6 @@
 import Hero from "./Hero";
-import About from "./about";
-import Sections from "./sections";
+import About from "./About";
+import Sections from "./Sections";
 import Doctors from "./Doctors";
 
 export default function HomePage() {

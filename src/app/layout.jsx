@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import { Noto_Kufi_Arabic } from "next/font/google";
 
 import "./globals.css";
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
