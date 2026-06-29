@@ -1,4 +1,5 @@
 import Button from "../components/Button";
+import Counter from "../components/Counter";
 import {
   Calendar,
   PhoneCall,
@@ -8,11 +9,18 @@ import {
   Users,
 } from "lucide-react";
 
+const stats = [
+  { id: 1, prefix: "+", value: 500, suffix: "", label: "طبيب واستشاري" },
+  { id: 2, prefix: "+", value: 20, suffix: "", label: "قسم متخصص" },
+  { id: 3, prefix: "", value: 24, suffix: "/7", label: "خدمة طوارئ" },
+  { id: 4, prefix: "+", value: 10000, suffix: "", label: "مريض سنوياً" },
+];
+
 export default function Hero() {
   return (
     <section
       dir="rtl"
-      className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden pt-24 px-6 md:px-16 lg:px-24"
+      className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden pt-24"
     >
       <div className="absolute inset-0 z-0">
         <img
@@ -23,7 +31,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-background/80"></div>
       </div>
 
-      <div className="relative z-10 max-w-2xl text-right flex flex-col space-y-6 my-auto">
+      <div className="relative z-10 max-w-2xl text-right flex flex-col space-y-6 my-auto px-6 md:px-16 lg:px-24">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-secondary leading-tight">
           نـــــرعــــاكــــم
           <br />
@@ -49,46 +57,36 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 w-full bg-brand-secondary/90 backdrop-blur-md rounded-t-3xl p-6 md:p-8 mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white shadow-2xl border-t border-white/10">
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <Users className="w-6 h-6 text-blue-200 mb-1" />
-          <span className="text-2xl md:text-3xl font-black text-blue-100">
-            +500
-          </span>
-          <span className="text-xs md:text-sm font-medium text-blue-200">
-            طبيب واستشاري
-          </span>
-        </div>
-
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <Layers className="w-6 h-6 text-blue-200 mb-1" />
-          <span className="text-2xl md:text-3xl font-black text-blue-100">
-            +20
-          </span>
-          <span className="text-xs md:text-sm font-medium text-blue-200">
-            قسم متخصص
-          </span>
-        </div>
-
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <Clock className="w-6 h-6 text-blue-200 mb-1" />
-          <span className="text-2xl md:text-3xl font-black text-blue-100">
-            24/7
-          </span>
-          <span className="text-xs md:text-sm font-medium text-blue-200">
-            خدمة طوارئ
-          </span>
-        </div>
-
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <Activity className="w-6 h-6 text-blue-200 mb-1" />
-          <span className="text-2xl md:text-3xl font-black text-blue-100">
-            +10,000
-          </span>
-          <span className="text-xs md:text-sm font-medium text-blue-200">
-            مريض سنوياً
-          </span>
-        </div>
+      <div className="relative z-10 w-full pb-6 md:pb-12 pt-16 px-6 md:px-16 lg:px-24 grid grid-cols-2 md:grid-cols-4 gap-8 text-center bg-gradient-to-t from-background to-transparent">
+        {stats.map((stat) => (
+          <div
+            key={stat.id}
+            className="flex flex-col items-center justify-center space-y-2 "
+          >
+            <div
+              className="flex items-center justify-center font-black text-brand-primary"
+              dir="ltr"
+            >
+              <span className="text-4xl md:text-5xl lg:text-6xl">
+                {stat.prefix}
+              </span>
+              <Counter
+                value={stat.value}
+                fontSize={48}
+                textColor="currentColor"
+                gradientFrom="transparent"
+                gradientTo="transparent"
+                gap={2}
+              />
+              <span className="text-4xl md:text-5xl lg:text-6xl">
+                {stat.suffix}
+              </span>
+            </div>
+            <span className="text-base md:text-lg font-extrabold text-gray-800">
+              {stat.label}
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   );
