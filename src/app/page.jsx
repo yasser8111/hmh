@@ -1,7 +1,7 @@
-import Hero from "./Hero";
-import About from "./About";
-import Sections from "./Sections";
-import Doctors from "./Doctors";
+import Hero from "./homepage/Hero";
+import About from "./homepage/About";
+import Sections from "./homepage/Sections";
+import Doctors from "./homepage/Doctors";
 
 export const metadata = {
   title: "مستشفى حضرموت الحديث | الرئيسية - نرعاكم باهتمام",
