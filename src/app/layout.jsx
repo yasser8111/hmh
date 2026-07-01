@@ -1,6 +1,6 @@
 import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import JsonLd from "../components/JsonLd";
-// import Footer from "../components/Footer";
 import { Noto_Kufi_Arabic } from "next/font/google";
 
 import "./globals.css";
@@ -90,7 +90,7 @@ export default function RootLayout({ children }) {
         <JsonLd />
         <Header />
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
