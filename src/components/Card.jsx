@@ -28,7 +28,7 @@ const themeStyles = {
   }
 };
 
-export const Card = ({ item, bgColor = 'bg-white' }) => {
+export const Card = ({ item, bgColor = 'bg-white', showExploreLink = false }) => {
   const IconComponent = item.icon;
   const styles = themeStyles[item.themeColor] || themeStyles["blue-600"];
 
@@ -52,10 +52,12 @@ export const Card = ({ item, bgColor = 'bg-white' }) => {
         </p>
       </div>
 
-      <div className={`flex items-center gap-2 text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer hover:underline ${styles.groupText}`}>
-        <span>استكشف المزيد</span>
-        <ArrowLeft className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" />
-      </div>
+      {showExploreLink && (
+        <div className={`flex items-center gap-2 text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer hover:underline ${styles.groupText}`}>
+          <span>استكشف المزيد</span>
+          <ArrowLeft className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" />
+        </div>
+      )}
     </div>
   );
 };

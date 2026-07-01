@@ -57,7 +57,7 @@ export default function Sections() {
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {departments.map((dept) => (
-          <Card key={dept.id} item={dept} />
+          <Card key={dept.id} item={dept} showExploreLink={true} />
         ))}
       </div>
     </section>
