@@ -11,7 +11,7 @@ import {
 import AuthToggle from "./AuthToggle";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
-import Button from "../../components/Button";
+import Button from "../../components/ui/Button";
 
 export default function AuthForm() {
   const [activeTab, setActiveTab] = useState("login");

@@ -1,6 +1,6 @@
 import React from "react";
 import { Stethoscope, Activity, Baby, Siren } from "lucide-react";
-import { Card } from "../../components/Card";
+import { Card } from "../../components/ui/Card";
 
 const departments = [
   {

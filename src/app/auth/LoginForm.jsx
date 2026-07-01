@@ -1,8 +1,8 @@
 "use client";
 import { useState, useCallback } from "react";
 import { Mail, Lock } from "lucide-react";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
+import Input from "../../components/ui/Input";
+import Button from "../../components/ui/Button";
 
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -33,9 +33,11 @@ export default function LoginForm({ onSubmit, isSubmitting }) {
     e.preventDefault();
     const newErrors = {};
     if (!loginData.email) newErrors.email = "البريد الإلكتروني مطلوب";
-    else if (!validateEmail(loginData.email)) newErrors.email = "يرجى إدخال بريد إلكتروني صحيح";
+    else if (!validateEmail(loginData.email))
+      newErrors.email = "يرجى إدخال بريد إلكتروني صحيح";
     if (!loginData.password) newErrors.password = "كلمة المرور مطلوبة";
-    else if (!validatePassword(loginData.password)) newErrors.password = "كلمة المرور يجب أن تكون 8 أحرف على الأقل";
+    else if (!validatePassword(loginData.password))
+      newErrors.password = "كلمة المرور يجب أن تكون 8 أحرف على الأقل";
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -75,7 +77,10 @@ export default function LoginForm({ onSubmit, isSubmitting }) {
       />
 
       <div className="flex items-center justify-between pt-1">
-        <label htmlFor="rememberMe" className="flex items-center gap-2.5 cursor-pointer select-none group">
+        <label
+          htmlFor="rememberMe"
+          className="flex items-center gap-2.5 cursor-pointer select-none group"
+        >
           <div className="relative">
             <input
               type="checkbox"
@@ -87,13 +92,17 @@ export default function LoginForm({ onSubmit, isSubmitting }) {
             />
             <div className="w-5 h-5 rounded-lg border-2 border-gray-300 bg-slate-50 peer-checked:border-brand-primary peer-checked:bg-brand-primary transition-all duration-200 flex items-center justify-center">
               <svg
-                className={`w-3 h-3 text-white transition-opacity duration-200 ${loginData.rememberMe ? 'opacity-100' : 'opacity-0'}`}
+                className={`w-3 h-3 text-white transition-opacity duration-200 ${loginData.rememberMe ? "opacity-100" : "opacity-0"}`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={3}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
             </div>
           </div>
@@ -101,7 +110,10 @@ export default function LoginForm({ onSubmit, isSubmitting }) {
             تذكرني
           </span>
         </label>
-        <a href="#" className="text-sm font-bold text-brand-primary hover:text-brand-primary/80 transition-colors">
+        <a
+          href="#"
+          className="text-sm font-bold text-brand-primary hover:text-brand-primary/80 transition-colors"
+        >
           نسيت كلمة المرور؟
         </a>
       </div>

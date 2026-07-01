@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "../components/layout/Header";
 import JsonLd from "../components/JsonLd";
 // import Footer from "../components/Footer";
 import { Noto_Kufi_Arabic } from "next/font/google";

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Button from "./Button";
+import Button from "../ui/Button";
 import { Menu, X } from "lucide-react";
 
 export default function Header() {
@@ -31,44 +31,51 @@ export default function Header() {
         }`}
       >
         <div className="flex-1 flex items-center justify-start">
-          <img
-            src="/logo.png"
-            alt="Hadramout Modern Hospital Logo"
-            className="h-20 md:h-24 w-auto object-contain"
-          />
+          <a href="/">
+            <img
+              src="/logo.png"
+              alt="Hadramout Modern Hospital Logo"
+              className="h-20 md:h-24 w-auto object-contain cursor-pointer"
+            />
+          </a>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8 font-medium text-gray-600 shrink-0" aria-label="التنقل الرئيسي">
+        <nav
+          className="hidden md:flex items-center gap-8 font-medium text-gray-600 shrink-0"
+          aria-label="التنقل الرئيسي"
+        >
           <a
-            href="#hero"
+            href="/#hero"
             className="hover:text-brand-primary transition-colors text-gray-900"
           >
             الرئيسية
           </a>
           <a
-            href="#about"
+            href="/#about"
             className="hover:text-brand-primary transition-colors"
           >
             نبذة عنا
           </a>
           <a
-            href="#sections"
+            href="/#sections"
             className="hover:text-brand-primary transition-colors"
           >
             الأقسام
           </a>
           <a
-            href="#doctors"
+            href="/#doctors"
             className="hover:text-brand-primary transition-colors"
           >
             الأطباء
           </a>
-          <a href="#" className="hover:text-brand-primary transition-colors">
+          <a
+            href="/#contact"
+            className="hover:text-brand-primary transition-colors"
+          >
             تواصل معنا
           </a>
         </nav>
 
-        {/* Menu button for mobile */}
         <div className="flex-1 flex items-center justify-end md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -83,7 +90,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Book Now button for desktop */}
         <div className="hidden md:flex flex-1 items-center justify-end">
           <Button
             variant="success"
@@ -95,7 +101,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu Panel */}
       <div
         className={`fixed inset-x-0 top-[110px] mx-6 z-40 bg-white/95 backdrop-blur-lg flex flex-col p-8 space-y-6 md:hidden rounded-3xl border border-gray-100 shadow-2xl transition-all duration-300 ease-out origin-top ${
           isMenuOpen
@@ -103,37 +108,40 @@ export default function Header() {
             : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col gap-5 text-lg font-bold text-gray-800 text-right" aria-label="قائمة التنقل للهاتف">
+        <nav
+          className="flex flex-col gap-5 text-lg font-bold text-gray-800 text-right"
+          aria-label="قائمة التنقل للهاتف"
+        >
           <a
-            href="#hero"
+            href="/#hero"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-brand-primary transition-colors py-2 border-b border-gray-50"
           >
             الرئيسية
           </a>
           <a
-            href="#about"
+            href="/#about"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-brand-primary transition-colors py-2 border-b border-gray-50"
           >
             نبذة عنا
           </a>
           <a
-            href="#sections"
+            href="/#sections"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-brand-primary transition-colors py-2 border-b border-gray-50"
           >
             الأقسام
           </a>
           <a
-            href="#doctors"
+            href="/#doctors"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-brand-primary transition-colors py-2 border-b border-gray-50"
           >
             الأطباء
           </a>
           <a
-            href="#"
+            href="/#contact"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-brand-primary transition-colors py-2 border-b border-gray-50"
           >

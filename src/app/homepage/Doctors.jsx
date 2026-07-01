@@ -1,5 +1,5 @@
 import { Calendar } from "lucide-react";
-import Button from "../../components/Button";
+import Button from "../../components/ui/Button";
 
 const doctors = [
   {

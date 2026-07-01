@@ -1,8 +1,8 @@
 "use client";
 import { useState, useCallback } from "react";
 import { Mail, Lock, User, ShieldCheck } from "lucide-react";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
+import Input from "../../components/ui/Input";
+import Button from "../../components/ui/Button";
 
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
